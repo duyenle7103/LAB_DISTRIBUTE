@@ -1,2 +1,2 @@
 # LAB_DISTRIBUTE
-The branch "main" will not contain any source code. The source code for each lab will be in the corresponding branch. For example, lab 1 will be in the "lab1" branch.
+The "main" branch will not contain any source code. Each lab's source code will be located in its respective branch. For instance, the source code for Lab 1 will be in the "lab1" branch.
