@@ -38,7 +38,7 @@ public class EnvSerializer implements Serializer<Environment> {
             if (data instanceof Air) {
                 Air airData = (Air)data;
                 int len = Integer.BYTES + type.length + Integer.BYTES + time.length + Integer.BYTES + station.length +
-                        Float.BYTES * 5 + Integer.BYTES * 6;
+                        Float.BYTES * 8 + Integer.BYTES * 3;
                 buf = ByteBuffer.allocate(len);
                 buf.putInt(type.length);
                 buf.put(type);
@@ -50,13 +50,13 @@ public class EnvSerializer implements Serializer<Environment> {
                 buf.putFloat(airData.moisture);
                 buf.putInt(airData.light);
                 buf.putFloat(airData.totalRainfall);
-                buf.putInt(airData.rainfall);
+                buf.putFloat(airData.rainfall);
                 buf.putInt(airData.windDirection);
                 buf.putFloat(airData.PM2_5);
                 buf.putFloat(airData.PM10);
                 buf.putInt(airData.CO);
-                buf.putInt(airData.NOx);
-                buf.putInt(airData.SO2);
+                buf.putFloat(airData.NOx);
+                buf.putFloat(airData.SO2);
             } else if (data instanceof Earth) {
                 Earth earthData = (Earth)data;
                 int len = Integer.BYTES + type.length + Integer.BYTES + time.length + Integer.BYTES + station.length +

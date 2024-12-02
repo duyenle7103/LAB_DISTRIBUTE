@@ -75,7 +75,6 @@ public class Earth implements Environment {
     @Override
     public String toCSV() {
         String result =
-            time + "," +
             station + "," +
             moisture + "," +
             temperature + "," +

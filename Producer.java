@@ -103,9 +103,9 @@ public class Producer {
 
             if (dataType == Air.class) {
                 return new Air("air", time, station, Float.parseFloat(fields[2]), Float.parseFloat(fields[3]),
-                    Integer.parseInt(fields[4]), Float.parseFloat(fields[5]), Integer.parseInt(fields[6]),
+                    Integer.parseInt(fields[4]), Float.parseFloat(fields[5]), Float.parseFloat(fields[6]),
                     Integer.parseInt(fields[7]), Float.parseFloat(fields[8]), Float.parseFloat(fields[9]),
-                    Integer.parseInt(fields[10]), Integer.parseInt(fields[11]), Integer.parseInt(fields[12]));
+                    Integer.parseInt(fields[10]), Float.parseFloat(fields[11]), Float.parseFloat(fields[12]));
             } else if (dataType == Earth.class) {
                 return new Earth("earth", time, station, Float.parseFloat(fields[2]), Float.parseFloat(fields[3]),
                     Float.parseFloat(fields[4]), Float.parseFloat(fields[5]), Integer.parseInt(fields[6]),

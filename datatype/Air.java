@@ -11,13 +11,13 @@ public class Air implements Environment {
     public float moisture;
     public int light;
     public float totalRainfall;
-    public int rainfall;
+    public float rainfall;
     public int windDirection;
     public float PM2_5;
     public float PM10;
     public int CO;
-    public int NOx;
-    public int SO2;
+    public float NOx;
+    public float SO2;
 
     public Air() {
         this.type = "air";
@@ -27,18 +27,18 @@ public class Air implements Environment {
         this.moisture = 0.0f;
         this.light = 0;
         this.totalRainfall = 0.0f;
-        this.rainfall = 0;
+        this.rainfall = 0.0f;
         this.windDirection = 0;
         this.PM2_5 = 0.0f;
         this.PM10 = 0.0f;
         this.CO = 0;
-        this.NOx = 0;
-        this.SO2 = 0;
+        this.NOx = 0.0f;
+        this.SO2 = 0.0f;
     }
 
     public Air(String type, Date time, String station, float temperature, float moisture, int light,
-               float totalRainfall, int rainfall, int windDirection, float PM2_5, float PM10, int CO,
-               int NOx, int SO2) {
+               float totalRainfall, float rainfall, int windDirection, float PM2_5, float PM10, int CO,
+               float NOx, float SO2) {
         this.type = type;
         this.time = time;
         this.station = station;
@@ -88,7 +88,6 @@ public class Air implements Environment {
     @Override
     public String toCSV() {
         String result =
-            time + "," +
             station + "," +
             temperature + "," +
             moisture + "," +

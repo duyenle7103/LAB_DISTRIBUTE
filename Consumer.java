@@ -27,7 +27,7 @@ public class Consumer {
 
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
-                System.out.println("Shutting down ...");
+                System.out.println("Shutting down...");
                 consumer.close();
             }
         });
@@ -40,5 +40,4 @@ public class Consumer {
             });
         }
     }
-
 }

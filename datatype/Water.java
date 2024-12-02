@@ -58,7 +58,6 @@ public class Water implements Environment {
     @Override
     public String toCSV() {
         String result =
-            time + "," +
             station + "," +
             pH + "," +
             DO + "," +

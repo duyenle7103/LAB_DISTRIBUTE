@@ -53,13 +53,13 @@ public class EnvDeserialzer implements Deserializer<Environment> {
                 float moisture = buf.getFloat();
                 int light = buf.getInt();
                 float totalRainfall = buf.getFloat();
-                int rainfall = buf.getInt();
+                float rainfall = buf.getFloat();
                 int windDirection = buf.getInt();
                 float PM2_5 = buf.getFloat();
                 float PM10 = buf.getFloat();
                 int CO = buf.getInt();
-                int NOx = buf.getInt();
-                int SO2 = buf.getInt();
+                float NOx = buf.getFloat();
+                float SO2 = buf.getFloat();
 
                 return new Air(type, time, station, temperature, moisture, light, totalRainfall,
                                rainfall, windDirection, PM2_5, PM10, CO, NOx, SO2);
